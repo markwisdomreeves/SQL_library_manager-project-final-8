@@ -1,0 +1,12 @@
+extends ../layout 
+block content
+    div.delete
+        h2 Delete Book
+
+    form(method="post" action=`/books/${book.id}/delete` onsubmit='return confirm("Are you sure you want to delete this book?");')
+
+        include form
+        p    
+            a.button(href='/') Cancel
+        p
+            input(type='submit' value="Delete Book")

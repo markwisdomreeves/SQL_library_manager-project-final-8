@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1.error_alert= message
+    h2.error_alert= error.status
+    pre.error_alert #{error.stack}
+    br
+    p
+        a.button(href='/books') Home
+
